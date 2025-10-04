@@ -1,0 +1,14 @@
+- name: Set variables for Playbook 1
+  hosts: local
+  connection: local
+  vars:
+    app_name: "MyARoboshopApp"
+    app_version: "1.0.0"
+    deploy_path: "/var/www/myapp" 
+
+  tasks:
+    - name: Display application details
+      vars:
+        app_version: "2.0.0"
+      ansiable.builtin.debug:
+        msg: "Deploying {{ app_name }} version {{ app_version }} to {{ deploy_path }}"    
