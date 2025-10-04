@@ -1,7 +1,6 @@
-- name: My First Playbook
-  hosts: frontend
+- name: "ping the server"
+  hosts: frontend # Which server you are connecting to
+  # List of tasks/collections/modules
   tasks:
-    - name: Print a message
-      ansible.builtin.Ping:
-      debug:
-        msg: "Hello, Ansible!"
+  - name: ping
+    ansible.builtin.ping:
