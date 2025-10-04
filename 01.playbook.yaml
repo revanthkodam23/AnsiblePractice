@@ -1,0 +1,8 @@
+- name: My First Playbook
+  hosts: frontend
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "Hello, Ansible!"
+      Ansible.builtin.Ping:
+        data: "Pinging frontend hosts"
