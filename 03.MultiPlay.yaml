@@ -17,3 +17,13 @@
     -name: Task 2 in Playbook 2
      ansible.builtin.debug:
        msg: "Another task in Playbook 2 on backend"
+- name: Playbook 3
+  hosts: frontend 
+  tasks:
+    -name: Task 1 in Playbook 3
+     ansible.builtin.debug:
+       msg: "This is Playbook 3 on frontend"
+    -name: Task 2 in Playbook 3
+     ansible.builtin.debug:
+       msg: "Another task in Playbook 3 on frontend"
+       
