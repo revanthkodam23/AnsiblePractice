@@ -1,5 +1,6 @@
 - name: Set variables for Playbook 1
-  hosts: frontend  
+  hosts: local
+  collection: local
   vars:
     app_name: "MyARoboshopApp"
     app_version: "1.0.0"
