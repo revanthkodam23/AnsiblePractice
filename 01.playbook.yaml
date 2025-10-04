@@ -2,7 +2,6 @@
   hosts: frontend
   tasks:
     - name: Print a message
+      ansible.builtin.Ping:
       debug:
         msg: "Hello, Ansible!"
-      Ansible.builtin.Ping:
-        data: "Pinging frontend hosts"
