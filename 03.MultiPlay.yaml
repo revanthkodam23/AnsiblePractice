@@ -1,0 +1,19 @@
+- name: Playbook 1
+  hosts: frontend
+  tasks:
+    -name: Task 1 in Playbook 1
+     ansible.builtin.debug:
+       msg: "This is Playbook 1 on frontend"
+    -name: Task 2 in Playbook 1
+     ansible.builtin.debug:
+       msg: "Another task in Playbook 1 on frontend"
+
+- name: Playbook 2
+  hosts: frontend
+  tasks:
+    -name: Task 1 in Playbook 2
+     ansible.builtin.debug:
+       msg: "This is Playbook 2 on backend"
+    -name: Task 2 in Playbook 2
+     ansible.builtin.debug:
+       msg: "Another task in Playbook 2 on backend"
