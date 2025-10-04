@@ -1,0 +1,11 @@
+- name: Set variables for Playbook 1
+  hosts: frontend  
+  vars:
+    app_name: "MyARoboshopApp"
+    app_version: "1.0.0"
+    deploy_path: "/var/www/myapp" 
+
+  tasks:
+    - name: Display application details
+      ansible.builtin.debug:
+        msg: "Deploying {{ app_name }} version {{ app_version }} to {{ deploy_path }}"    
