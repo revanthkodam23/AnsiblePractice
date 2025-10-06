@@ -1,7 +1,7 @@
 - name: Set variables for Playbook 1
   hosts: local
   connection: local
-  var_files:
+  vars_files:
   - Appdetails.yaml  
   tasks:
   - name: Display application details    
