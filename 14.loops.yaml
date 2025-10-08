@@ -10,14 +10,6 @@
     - Suresh
     - Raheem
     - John
-  - name: print names 2
-    ansible.builtin.package:
-      name: "{{ item }}"
-      state: latest
-    loop:
-    - nginx
-    - mysql
-    - zip
   - name: print names 3
     ansible.builtin.package:
       name: "{{ item.name }}"
