@@ -10,11 +10,4 @@
     - Suresh
     - Raheem
     - John
-  - name: print names 3
-    ansible.builtin.package:
-      name: "{{ item.name }}"
-      state: "{{ item.state }}"
-    loop:
-    - { name: "nginx", state: "absent"}
-    - { name: "mysql", state: "absent"}
-    - { name: "zip", state: "latest"}
+  
