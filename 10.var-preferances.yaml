@@ -4,7 +4,7 @@
   vars:
     NAME: from play level
   vars_files:
-  - course.yaml
+  - Appdetails.yaml
   vars_prompt:
   - name: NAME
     prompt: What is your NAME?
@@ -14,7 +14,7 @@
     vars:
       NAME: from task level
     ansible.builtin.debug:
-      msg: "Name: {{ NAME }}"
+      msg: "Name: {{ app_name }}"
 
 # 1. args or command line
 # 2. from task
