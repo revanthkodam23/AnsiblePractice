@@ -13,7 +13,7 @@
   - name: testing variables preference
     vars:
       NAME: from task level
-      ansible.builtin.debug:
+    ansible.builtin.debug:
       msg: "Name: {{ app_name }}"
 
 # 1. args or command line
