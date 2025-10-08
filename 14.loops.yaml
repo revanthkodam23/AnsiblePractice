@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   tasks:
-  - name: print names
+  - name: print names 1
     ansible.builtin.debug:
       msg: "Hello {{ item }}" # item is reserved
     loop:
@@ -10,3 +10,20 @@
     - Suresh
     - Raheem
     - John
+  - name: print names 2
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: latest
+    loop:
+    - nginx
+    - mysql
+    - zip
+  tasks:
+  - name: print names 3
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: "nginx", state: "absent"}
+    - { name: "mysql", state: "absent"}
+    - { name: "zip", state: "latest"}
