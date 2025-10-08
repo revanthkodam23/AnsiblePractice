@@ -18,7 +18,6 @@
     - nginx
     - mysql
     - zip
-  tasks:
   - name: print names 3
     ansible.builtin.package:
       name: "{{ item.name }}"
